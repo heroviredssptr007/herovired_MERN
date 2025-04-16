@@ -107,6 +107,10 @@ server {
 ```
 #sudo systemctl restart nginx
 ```
+Now we can able to access application in 80 port
+![image](https://github.com/user-attachments/assets/46888674-ec60-40d5-a3c5-e5a1d7594b86)
+
+
 
 
 
