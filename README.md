@@ -27,9 +27,10 @@ Follow the steps below to create EC2 instances for your application:
 
 Once all settings are configured, click **Launch Instance** to start the EC2 instances.
 
+
 ![image](https://github.com/user-attachments/assets/e649618a-3ba9-48b8-85f4-3acf1b41e174)
 
 
 **Step 2: Configuring Backend service**
 1. Clone this repository(https://github.com/UnpredictablePrashant/TravelMemory.git) to the Backend server
-````git clone https://github.com/UnpredictablePrashant/TravelMemory.git````
+      git clone https://github.com/UnpredictablePrashant/TravelMemory.git
