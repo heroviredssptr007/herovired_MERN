@@ -2,11 +2,29 @@
 
 **Step 1: Creation of Instances**
 
-* In Search Bar, Type ec2 and Click ec2 and click on Launch instance
-* Please follow the below steps to create ec2 instances
-      * Please select No of instances as 2.
-      * Please select ubuntu 24.04 LTS ami and instance type as t3.micro.
-      * Create and select the Keypair.
-      * In Network setting, select VPC and enable the Public IP and Security group opening ports 22,80, 443, 3000 and 3001.
-      * Provide 8 GB storage.
+
+Follow the steps below to create EC2 instances for your application:
+
+1. In the AWS Management Console, search for `EC2` in the search bar and click on **EC2**.
+2. Click on **Launch Instance**.
+3. Configure the instance with the following settings:
+   - **Number of instances**: `2`
+   - **AMI**: `Ubuntu 24.04 LTS`
+   - **Instance Type**: `t3.micro`
+4. **Key Pair**:
+   - Create a new key pair or select an existing one.
+5. **Network Settings**:
+   - Select the appropriate **VPC**.
+   - Enable **Auto-assign Public IP**.
+   - Create or select a **Security Group** with the following inbound rules:
+     - Port `22` (SSH)
+     - Port `80` (HTTP)
+     - Port `443` (HTTPS)
+     - Port `3000` (Custom App)
+     - Port `3001` (Custom App)
+6. **Storage**:
+   - Set the storage size to `8 GB`.
+
+Once all settings are configured, click **Launch Instance** to start the EC2 instances.
+
 
