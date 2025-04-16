@@ -57,7 +57,7 @@ git clone https://github.com/UnpredictablePrashant/TravelMemory.git
 ![image](https://github.com/user-attachments/assets/29c9ce69-5563-48d6-be55-1fec30a1c71a)
 
 
-**5.Make startup application**
+**5.Make as startup application**
 ```
 [Unit]
 Description=Backend application
