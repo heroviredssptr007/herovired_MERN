@@ -32,16 +32,52 @@ Once all settings are configured, click **Launch Instance** to start the EC2 ins
 
 
 **Step 2: Configuring Backend service**
-1. Installation of latest nodejs package
+**1. Installation of latest nodejs package**
 ```
    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
    sudo apt install -y nodejs
 ```
 
-Clone this repository(https://github.com/UnpredictablePrashant/TravelMemory.git) to the Backend server
+**2.Clone this repository(https://github.com/UnpredictablePrashant/TravelMemory.git) to the Backend server**
 ```
 git clone https://github.com/UnpredictablePrashant/TravelMemory.git
 ```
 ![image](https://github.com/user-attachments/assets/c475e229-3ca6-4777-94e2-dc8ebe9e9878)
+
+**3.Get into the ./TravelMemory/backend/ and create .env file, add below values into the .env file**
+![image](https://github.com/user-attachments/assets/f8bfb644-bd9c-4f50-8740-2b3def21c0f2)
+
+**4.Run below commands**
+```
+#npm install
+#node index.js
+```
+![image](https://github.com/user-attachments/assets/6c57de43-cddc-4801-9f1b-2d213568d667)
+
+![image](https://github.com/user-attachments/assets/5e176023-8687-40a3-9d09-fa97c9e6c9b1)
+
+**5.Make startup application**
+```
+[Unit]
+Description=My Node.js App via npm
+After=network.target
+
+[Service]
+WorkingDirectory=/home/ubuntu/TravelMemory/backend/
+ExecStart=/usr/bin/node index.js
+Restart=always
+Environment=NODE_ENV=production
+User=ubuntu
+# Optional: capture logs
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+
+
 
 
