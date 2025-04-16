@@ -76,8 +76,34 @@ StandardError=journal
 [Install]
 WantedBy=multi-user.target
 ```
+**6. With the help of nginx make reverse proxy to map 3001 port to 80 port**
+```
+#sudo apt install -y nginx
+```
+```
+#cat > /etc/nginx/sites-enabled/default
+```
 
+Add below line to file
 
+```
+server {
+    listen 80;
+    server_name yourdomain.com;  # Or use _ for default server
+
+    location / {
+        proxy_pass http://localhost:3001;  # or http://127.0.0.1:3001
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+```
+#nginx -t --> Verify the configuration
+```
 
 
 
