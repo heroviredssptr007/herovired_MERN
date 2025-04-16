@@ -33,4 +33,5 @@ Once all settings are configured, click **Launch Instance** to start the EC2 ins
 
 **Step 2: Configuring Backend service**
 1. Clone this repository(https://github.com/UnpredictablePrashant/TravelMemory.git) to the Backend server
-      git clone https://github.com/UnpredictablePrashant/TravelMemory.git
+
+      #git clone https://github.com/UnpredictablePrashant/TravelMemory.git
