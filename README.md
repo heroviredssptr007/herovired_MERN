@@ -60,7 +60,7 @@ git clone https://github.com/UnpredictablePrashant/TravelMemory.git
 **5.Make startup application**
 ```
 [Unit]
-Description=My Node.js App via npm
+Description=Backend application
 After=network.target
 
 [Service]
@@ -76,6 +76,7 @@ StandardError=journal
 [Install]
 WantedBy=multi-user.target
 ```
+
 
 
 
