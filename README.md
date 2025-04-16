@@ -32,7 +32,16 @@ Once all settings are configured, click **Launch Instance** to start the EC2 ins
 
 
 **Step 2: Configuring Backend service**
-1. Clone this repository(https://github.com/UnpredictablePrashant/TravelMemory.git) to the Backend server
+1. Installation of latest nodejs package
+```
+   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+   sudo apt install -y nodejs
+```
+
+Clone this repository(https://github.com/UnpredictablePrashant/TravelMemory.git) to the Backend server
 ```
 git clone https://github.com/UnpredictablePrashant/TravelMemory.git
 ```
+![image](https://github.com/user-attachments/assets/c475e229-3ca6-4777-94e2-dc8ebe9e9878)
+
+
