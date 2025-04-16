@@ -78,7 +78,7 @@ WantedBy=multi-user.target
 ```
 **6. With the help of nginx make reverse proxy to map 3001 port to 80 port**
 ```
-#sudo apt install -y nginx
+$sudo apt install -y nginx
 ```
 ```
 #cat > /etc/nginx/sites-enabled/default
@@ -103,6 +103,9 @@ server {
 ```
 ```
 #nginx -t --> Verify the configuration
+```
+```
+#sudo systemctl restart nginx
 ```
 
 
