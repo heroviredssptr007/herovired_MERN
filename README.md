@@ -1,4 +1,4 @@
-# herovired_MERN
+![image](https://github.com/user-attachments/assets/1ac565af-05bd-4d68-b6d1-518e892b9b83)# herovired_MERN
 
 **Step 1: Creation of Instances**
 
@@ -33,4 +33,6 @@ Once all settings are configured, click **Launch Instance** to start the EC2 ins
 
 **Step 2: Configuring Backend service**
 1. Clone this repository(https://github.com/UnpredictablePrashant/TravelMemory.git) to the Backend server
-    #git clone https://github.com/UnpredictablePrashant/TravelMemory.git
+```
+git clone https://github.com/UnpredictablePrashant/TravelMemory.git
+```
