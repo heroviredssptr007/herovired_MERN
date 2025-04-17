@@ -115,6 +115,26 @@ Now we can able to access application in 80 port
  - Stop the instance
  - Select the Instance Click on Actions -> Select **Image and templates** -> Select Create Image.
  - Enter Image name and click on Create Image.
+   
+![image](https://github.com/user-attachments/assets/346993d4-0728-401c-8841-dfd14d312baf)
+
+**8. Create another ec2 instance with that AMI**
+
+1. In the AWS Management Console, search for `EC2` in the search bar and click on **EC2**.
+2. Click on **Launch Instance**.
+3. Configure the instance with the following settings:
+   - **Number of instances**: `1`
+   - **AMI**: `Backend-Image which will be there My AMI`
+   - **Instance Type**: `t3.micro`
+4. **Key Pair**:
+   - select an existing one which we have created before.
+5. **Network Settings**:
+   - Select the appropriate **VPC**.
+   - Enable **Auto-assign Public IP**.
+   -select a **Security Group** which we created before
+     
+6. **Storage**:
+   - Set the storage size to `8 GB`.
 
 
 
