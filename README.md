@@ -139,9 +139,33 @@ Now we can able to access application in 80 port
 **9. Creation of Backend load balancer**
    - **Creation of Target Groups**
      - Click on **Create Target Group**
-       - In Basic Configuration, Choose a target type as **Instances**
-       - Provide **Target group name**, No need to change any settings, Click on next
+       - In Basic Configuration-> Choose a target type as **Instances**
+       - Provide **Target group name**-> No need to change any settings, Click on next
+     - In **Register targets**
+       - select the instance
+       - click on **Include as Pending below** 
+       - Click **Create Target Group**
+   
+   ![image](https://github.com/user-attachments/assets/dbbfa534-67fc-4d53-91a0-99ef6ad73161)
+
    - **Creation of Load Balancer**
+     - Click on Create Load balancer
+     - Select Application Load balancer
+     - Provide the Load balancer name
+     - In scheme section select internet facing
+     - In Network mapping section select vpc and Select appropriate Availability zone.
+     - In Security Groups, select appropriate security group.
+     - In Listener and routing section, Select the target in default action and click on **Create load balancer**.
+
+![image](https://github.com/user-attachments/assets/a7d09141-ba08-44fa-a0f5-99047528fbb5)
+
+**10. Test your connection backend load balancer with help of postman**
+
+![image](https://github.com/user-attachments/assets/846a7975-4d57-4d4d-b9f2-42e2cf18d7f2)
+![image](https://github.com/user-attachments/assets/ab009ce9-ff8b-4b9e-bd65-fde0f44f8226)
+
+
+
 
 
 
