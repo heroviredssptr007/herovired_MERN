@@ -265,7 +265,9 @@ Now we can able to access application in 80 port
  - Select the Instance Click on Actions -> Select **Image and templates** -> Select Create Image.
  - Enter Image name and click on Create Image.
    
-![image](https://github.com/user-attachments/assets/346993d4-0728-401c-8841-dfd14d312baf)
+![image](https://github.com/user-attachments/assets/edacee0e-d889-4071-ae34-3a3b4dacd114)
+
+
 
 **8. Create another ec2 instance with that AMI**
 
@@ -284,8 +286,13 @@ Now we can able to access application in 80 port
      
 6. **Storage**:
    - Set the storage size to `8 GB`.
+     
+![image](https://github.com/user-attachments/assets/be531599-3054-4b3e-84f8-74524fa42ecd)
 
-**9. Creation of Backend load balancer**
+
+
+
+**9. Creation of Frontend load balancer**
    - **Creation of Target Groups**
      - Click on **Create Target Group**
        - In Basic Configuration-> Choose a target type as **Instances**
@@ -295,7 +302,8 @@ Now we can able to access application in 80 port
        - click on **Include as Pending below** 
        - Click **Create Target Group**
    
-   ![image](https://github.com/user-attachments/assets/dbbfa534-67fc-4d53-91a0-99ef6ad73161)
+   ![image](https://github.com/user-attachments/assets/7bccf1a5-c173-4933-af33-1d6a2d47e62a)
+
 
    - **Creation of Load Balancer**
      - Click on Create Load balancer
@@ -306,7 +314,10 @@ Now we can able to access application in 80 port
      - In Security Groups, select appropriate security group.
      - In Listener and routing section, Select the target in default action and click on **Create load balancer**.
 
-![image](https://github.com/user-attachments/assets/a7d09141-ba08-44fa-a0f5-99047528fbb5)
+
+
+![image](https://github.com/user-attachments/assets/fb3fb882-a8f8-43b4-8630-9c9bafa6e120)
+
 
 
 
