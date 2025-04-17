@@ -1,6 +1,6 @@
 # herovired_MERN
 
-##**Step 1: Creation of Instances**
+## **Step 1: Creation of Instances**
 
 
 Follow the steps below to create EC2 instances for your application:
