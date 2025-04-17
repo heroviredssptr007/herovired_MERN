@@ -94,7 +94,7 @@ Add below line to file
 ```
 server {
     listen 80;
-    server_name yourdomain.com;  # Or use _ for default server
+    server_name sandykrishna4u.info;  # Or use _ for default server
 
     location / {
         proxy_pass http://localhost:3001;  # or http://127.0.0.1:3001
@@ -110,8 +110,14 @@ server {
 #nginx -t --> Verify the configuration
 ```
 ```
-#sudo systemctl restart nginx
+#sudo systemctl daemon-reexec
+#sudo systemctl daemon-reload
+#sudo systemctl enable travelmemory_frontend.service
+sudo systemctl restart travelmemory_frontend.service
+#sudo systemctl status nginx
 ```
+![image](https://github.com/user-attachments/assets/319afdcc-6e7d-4b4a-9dfa-e663915f23cc)
+
 Now we can able to access application in 80 port
 ![image](https://github.com/user-attachments/assets/46888674-ec60-40d5-a3c5-e5a1d7594b86)
 
@@ -182,7 +188,7 @@ git clone https://github.com/UnpredictablePrashant/TravelMemory.git
 ```
 ![image](https://github.com/user-attachments/assets/c475e229-3ca6-4777-94e2-dc8ebe9e9878)
 
-**3.Get into the ./TravelMemory/backend/ and create .env file, add below values into the .env file**
+**3.Get into the ./TravelMemory/frontend/ and create .env file, add below values into the .env file**
 ```
 REACT_APP_BACKEND_URL=http://backend-ALB-1559357213.eu-north-1.elb.amazonaws.com
 ```
@@ -193,6 +199,69 @@ REACT_APP_BACKEND_URL=http://backend-ALB-1559357213.eu-north-1.elb.amazonaws.com
 #npm install
 #npm start
 ```
+![image](https://github.com/user-attachments/assets/98c57f83-950c-439d-bdf6-7bc97ffc0cf0)
+
+**5.Make as startup application**
+```
+[Unit]
+Description=Backend application
+After=network.target
+
+[Service]
+WorkingDirectory=/home/ubuntu/TravelMemory/frontend/
+ExecStart=/usr/bin/npm start
+Restart=always
+Environment=NODE_ENV=production
+User=ubuntu
+# Optional: capture logs
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+```
+**6. With the help of nginx make reverse proxy to map 3001 port to 80 port**
+```
+$sudo apt install -y nginx
+```
+```
+#cat > /etc/nginx/sites-enabled/default
+```
+
+Add below line to file
+
+```
+server {
+    listen 80;
+    server_name sandykrishna4u.info;  # Or use _ for default server
+
+    location / {
+        proxy_pass http://localhost:3000;  # or http://127.0.0.1:3000
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+```
+#nginx -t --> Verify the configuration
+```
+```
+#sudo systemctl daemon-reexec
+#sudo systemctl daemon-reload
+#sudo systemctl enable travelmemory_frontend.service
+sudo systemctl restart travelmemory_frontend.service
+#sudo systemctl status nginx
+```
+![image](https://github.com/user-attachments/assets/06840d55-7c0d-4f1b-93ee-ad8cfca22ad4)
+
+Now we can able to access application in 80 port
+![image](https://github.com/user-attachments/assets/e40e9f32-36a9-4f59-87b4-0e3f30426ed6)
+
+
+
 
 
 
