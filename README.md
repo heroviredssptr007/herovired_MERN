@@ -136,6 +136,13 @@ Now we can able to access application in 80 port
 6. **Storage**:
    - Set the storage size to `8 GB`.
 
+**9. Creation of Backend load balancer**
+   - **Creation of Target Groups**
+     - Click on **Create Target Group**
+       - In Basic Configuration, Choose a target type as **Instances**
+       - Provide **Target group name**, No need to change any settings, Click on next
+   - **Creation of Load Balancer**
+
 
 
 
