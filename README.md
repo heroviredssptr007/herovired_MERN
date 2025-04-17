@@ -321,7 +321,7 @@ Now we can able to access application in 80 port
 ## Step 4 : Register the domain with cloudflare
 ![image](https://github.com/user-attachments/assets/1f39134c-c99f-402d-8f38-b0d8f2858aac)
 
-Website : [sandykrishna4u.info](url)
+Website : [[sandykrishna4u.info](url)](http://sandykrishna4u.info/)
 
 
 
