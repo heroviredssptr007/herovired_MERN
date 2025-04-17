@@ -31,7 +31,8 @@ Once all settings are configured, click **Launch Instance** to start the EC2 ins
 ![image](https://github.com/user-attachments/assets/e649618a-3ba9-48b8-85f4-3acf1b41e174)
 
 
-**Step 2: Configuring Backend service**
+## **Step 2: Configuring Backend service**
+
 **1. Installation of latest nodejs package**
 ```
    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
