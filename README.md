@@ -164,6 +164,33 @@ Now we can able to access application in 80 port
 ![image](https://github.com/user-attachments/assets/846a7975-4d57-4d4d-b9f2-42e2cf18d7f2)
 ![image](https://github.com/user-attachments/assets/ab009ce9-ff8b-4b9e-bd65-fde0f44f8226)
 
+## **Step 3: Configuring Frontend service**
+
+**1. Installation of latest nodejs package**
+```
+   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+   sudo apt install -y nodejs
+```
+
+**2.Clone this repository(https://github.com/UnpredictablePrashant/TravelMemory.git) to the Backend server**
+```
+git clone https://github.com/UnpredictablePrashant/TravelMemory.git
+```
+![image](https://github.com/user-attachments/assets/c475e229-3ca6-4777-94e2-dc8ebe9e9878)
+
+**3.Get into the ./TravelMemory/backend/ and create .env file, add below values into the .env file**
+![image](https://github.com/user-attachments/assets/f8bfb644-bd9c-4f50-8740-2b3def21c0f2)
+
+**4.Run below commands**
+```
+#npm install
+#npm start
+```
+
+
+
+
+
 
 
 
