@@ -260,6 +260,55 @@ sudo systemctl restart travelmemory_frontend.service
 Now we can able to access application in 80 port
 ![image](https://github.com/user-attachments/assets/e40e9f32-36a9-4f59-87b4-0e3f30426ed6)
 
+**7. Creation of AMI**
+ - Stop the instance
+ - Select the Instance Click on Actions -> Select **Image and templates** -> Select Create Image.
+ - Enter Image name and click on Create Image.
+   
+![image](https://github.com/user-attachments/assets/346993d4-0728-401c-8841-dfd14d312baf)
+
+**8. Create another ec2 instance with that AMI**
+
+1. In the AWS Management Console, search for `EC2` in the search bar and click on **EC2**.
+2. Click on **Launch Instance**.
+3. Configure the instance with the following settings:
+   - **Number of instances**: `1`
+   - **AMI**: `Backend-Image which will be there My AMI`
+   - **Instance Type**: `t3.micro`
+4. **Key Pair**:
+   - select an existing one which we have created before.
+5. **Network Settings**:
+   - Select the appropriate **VPC**.
+   - Enable **Auto-assign Public IP**.
+   -select a **Security Group** which we created before
+     
+6. **Storage**:
+   - Set the storage size to `8 GB`.
+
+**9. Creation of Backend load balancer**
+   - **Creation of Target Groups**
+     - Click on **Create Target Group**
+       - In Basic Configuration-> Choose a target type as **Instances**
+       - Provide **Target group name**-> No need to change any settings, Click on next
+     - In **Register targets**
+       - select the instance
+       - click on **Include as Pending below** 
+       - Click **Create Target Group**
+   
+   ![image](https://github.com/user-attachments/assets/dbbfa534-67fc-4d53-91a0-99ef6ad73161)
+
+   - **Creation of Load Balancer**
+     - Click on Create Load balancer
+     - Select Application Load balancer
+     - Provide the Load balancer name
+     - In scheme section select internet facing
+     - In Network mapping section select vpc and Select appropriate Availability zone.
+     - In Security Groups, select appropriate security group.
+     - In Listener and routing section, Select the target in default action and click on **Create load balancer**.
+
+![image](https://github.com/user-attachments/assets/a7d09141-ba08-44fa-a0f5-99047528fbb5)
+
+
 
 
 
