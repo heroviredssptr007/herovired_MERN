@@ -46,6 +46,10 @@ git clone https://github.com/UnpredictablePrashant/TravelMemory.git
 ![image](https://github.com/user-attachments/assets/c475e229-3ca6-4777-94e2-dc8ebe9e9878)
 
 **3.Get into the ./TravelMemory/backend/ and create .env file, add below values into the .env file**
+```
+MONGO_URI='mongodb+srv://ssptr007:Srikrishna123@cluster0.38nvplb.mongodb.net/travelmemory'
+PORT=3001
+```
 ![image](https://github.com/user-attachments/assets/f8bfb644-bd9c-4f50-8740-2b3def21c0f2)
 
 **4.Run below commands**
@@ -179,6 +183,9 @@ git clone https://github.com/UnpredictablePrashant/TravelMemory.git
 ![image](https://github.com/user-attachments/assets/c475e229-3ca6-4777-94e2-dc8ebe9e9878)
 
 **3.Get into the ./TravelMemory/backend/ and create .env file, add below values into the .env file**
+```
+REACT_APP_BACKEND_URL=http://backend-ALB-1559357213.eu-north-1.elb.amazonaws.com
+```
 ![image](https://github.com/user-attachments/assets/f8bfb644-bd9c-4f50-8740-2b3def21c0f2)
 
 **4.Run below commands**
