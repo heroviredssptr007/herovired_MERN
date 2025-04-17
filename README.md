@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/1ac565af-05bd-4d68-b6d1-518e892b9b83)# herovired_MERN
 
-**Step 1: Creation of Instances**
+H1**Step 1: Creation of Instances**H1
 
 
 Follow the steps below to create EC2 instances for your application:
@@ -109,6 +109,9 @@ server {
 ```
 Now we can able to access application in 80 port
 ![image](https://github.com/user-attachments/assets/46888674-ec60-40d5-a3c5-e5a1d7594b86)
+
+**7. Creation of AMI**
+ - Stop 
 
 
 
