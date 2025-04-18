@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/686dc86b-f762-4680-a390-9b0de37e2bfe)# herovired_MERN
+# herovired_MERN
 
 ## **Step 1: Creation of Instances**
 
