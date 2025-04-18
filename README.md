@@ -204,7 +204,7 @@ REACT_APP_BACKEND_URL=http://backend-ALB-1559357213.eu-north-1.elb.amazonaws.com
 **5.Make as startup application**
 ```
 [Unit]
-Description=Backend application
+Description=Frontend application
 After=network.target
 
 [Service]
